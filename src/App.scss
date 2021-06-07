@@ -1,0 +1,26 @@
+@import "./scss/colors.scss";
+
+
+.main-head-text{
+  color: $templateheadText;
+  text-transform: capitalize;
+}
+
+
+::-webkit-scrollbar {
+  -webkit-appearance: none;
+  width: 10px !important;
+  height: 10px !important;
+}
+ 
+::-webkit-scrollbar-thumb {
+  border-radius: 7px !important;
+  background-color: $scrollBar;
+  box-shadow: 0 0 1px $loaderBg2;
+}
+
+::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset $loaderBg2;
+  box-shadow: inset $loaderBg2;
+  border-radius: 10px;
+}

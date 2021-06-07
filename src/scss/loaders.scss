@@ -1,0 +1,75 @@
+@import "./colors.scss";
+
+.placeholder_loader {
+  background: #f5f5f5;
+  opacity: 0.7;
+  padding: 1.2rem !important;
+  height: fit-content;
+}
+
+.cards{
+  .card {
+    .masks {
+      background: $loaderBg;
+      padding: 1rem;
+      margin-bottom: 0.5rem;
+      transition: all 0.8s ease-in-out;
+      background: linear-gradient(
+        to right,
+        $loaderBg2 10%,
+        $loaderBg3 20%,
+        $loaderBg2 30%
+      );
+    }
+  
+    .animate {
+      animation: shimmerLoader 1s linear infinite forwards;
+    }
+    .head-mask {
+      @extend .masks;
+      @extend .animate;
+      margin-bottom: 2rem; 
+      width: 90%;
+    }
+  
+    .body-mask {
+      @extend .masks;
+      @extend .animate;
+      margin-bottom: 1.5rem;
+      width: 80%;
+    }
+      .foot-loader {
+        @extend .animate;
+        padding: 1rem;
+        width: 50%;
+        margin-bottom: 0.5rem;
+        transition: all 0.8s ease-in-out;
+        background: $lightGreen;
+        background:linear-gradient(to right, #08bd37 10%, #33bf3a 20%, #399551 80%)
+      }
+    .footer {
+  
+      background: $templateFoot;
+    }
+  }
+}
+
+@keyframes shimmerLoader {
+  0% {
+    background-position: -50% 0;
+    width: 70%;
+  }
+  100% {
+    background-position: 40% 0;
+  }
+}
+
+@-webkit-keyframes shimmerLoader {
+  0% {
+    background-position: -50% 0;
+     width: 70%;
+  }
+  100% {
+    background-position: 40% 0;
+  }
+}
